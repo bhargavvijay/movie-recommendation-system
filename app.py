@@ -57,7 +57,7 @@ if st.button('Recommend'):
     images = []
 
     # Loop through recommended movies
-    for i in movies_recommended[:6]:  # Limit to top 6 recommendations
+    for i in movies_recommended[:11]:  # Limit to top 6 recommendations
         if movies.iloc[i[0]]['title'] != selected_movie_name:
             movie_id = movies.iloc[i[0]]['movie_id']  # Adjust if your DataFrame column name is different
             image_url = fetch_poster(movie_id)
