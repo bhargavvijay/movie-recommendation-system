@@ -69,7 +69,12 @@ if st.button('Recommend'):
         cols1 = st.columns(5)
         cols2 = st.columns(5)
 
-        for col, name, image in zip(cols1 + cols2, names[:10], images[:10]):
+        for col, name, image in zip(cols1, names[:5], images[:5]):
+            with col:
+                st.text(name)
+                st.image(image)
+
+        for col, name, image in zip(cols2, names[5:10], images[5:10]):
             with col:
                 st.text(name)
                 st.image(image)
