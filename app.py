@@ -66,10 +66,10 @@ if st.button('Recommend'):
                 names.append(movies.iloc[i[0]]['title'])
 
     if names:
-        # Create columns for displaying recommendations
-        cols = st.columns(len(names))  # Create columns dynamically based on the number of recommendations
+        cols1 = st.columns(5)
+        cols2 = st.columns(5)
 
-        for col, name, image in zip(cols, names, images):
+        for col, name, image in zip(cols1 + cols2, names[:10], images[:10]):
             with col:
                 st.text(name)
                 st.image(image)
